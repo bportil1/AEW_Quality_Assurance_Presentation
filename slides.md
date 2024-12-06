@@ -24,18 +24,6 @@ CSCI 550
 
 ---
 
-# NASA PROMISE Dataset Overview
-
-| Dataset | Dimensions  | Non-Defective/Defective (%) | System Type                                                                 |
-|---------|-------------|-----------------------------|-----------------------------------------------------------------------------|
-| CM1     | (498, 21)   | 90                          | Cruise missile control                    |
-| JM1     | (13204, 21) | 85                          | Air Traffic control                       |
-| KC1     | (2109, 21)  | 85                          | Aircraft control                          |
-| KC2     | (522, 21)   | 80                          | Aircraft control                          |
-| PC1     | (1109, 21)  | 93                          | Space shuttle telemetry data              |
-
----
-
 #  NASA PROMISE Dataset Feature Description
 
 <div style="font-size: 8px;">
@@ -54,6 +42,18 @@ CSCI 550
 | total_Op        | Total operations               | uniq_Op            | Unique operations           |
 |                 |                                | uniq_Opnd          | Unique operands             |
 </div>
+
+---
+
+# NASA PROMISE Dataset Overview
+
+| Dataset | Dimensions  | Non-Defective/Defective (%) | System Type                                                                 |
+|---------|-------------|-----------------------------|-----------------------------------------------------------------------------|
+| CM1     | (498, 21)   | 90                          | Cruise missile control                    |
+| JM1     | (13204, 21) | 85                          | Air Traffic control                       |
+| KC1     | (2109, 21)  | 85                          | Aircraft control                          |
+| KC2     | (522, 21)   | 80                          | Aircraft control                          |
+| PC1     | (1109, 21)  | 93                          | Space shuttle telemetry data              |
 
 ---
 layout: cover
@@ -127,3 +127,28 @@ layout: cover
 | Kmeans             | ('lloyd', 2)                    | 0.5161         | 0.3368     | 601.16            | 1.377          | 0.500 | 0.6602  |
 
 ---
+
+<img src="/kc2.jpg" style="width: 70%; height: 70%; margin: auto; object-fit: cover;">
+
+---
+
+<iframe src="/kc2_orig_data_3.html" width= '100%' height= '500px' style="border: none; position: absolute; top:0; left: 0; right: 0; bottom: 0; display: block; "></iframe>
+
+---
+
+<iframe src="/kc2_spectral_kmeans_rbf_2_eigen.html" width= '100%' height= '500px' style="border: none; position: absolute; top:0; left: 0; right: 0; bottom: 0; display: block; "></iframe>
+
+---
+
+<iframe src="/kc2_spectral_kmeans_rbf_2_whole.html" width= '100%' height= '500px' style="border: none; position: absolute; top:0; left: 0; right: 0; bottom: 0; display: block; "></iframe>
+
+---
+
+# Conclusion
+
+- AEW with spectral clustering was able to reasonably seperate defective modules in three of five of datasets
+
+- While optimization method improvements yielded more consistent clustering results, the method is still limited by high computational requirements
+
+- Some positive results in software defect detection were found with unsupervised methods but as a whole fell short of their supervised counterparts
+
